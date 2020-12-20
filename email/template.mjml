@@ -1,0 +1,81 @@
+import mjml2html from 'mjml'
+
+const htmlOutput = mjml2html(`
+  <mjml>
+    <mj-head>
+      <mj-style>
+        .header div {
+          color: #9278A1 !important;
+          font-size: 28px !important;
+          text-align: center !important;
+        }
+
+        .title div {
+          color: #d6e2eb !important;
+          font-size: 24px !important;
+        }
+
+        .content div {
+          color: #d6e2eb !important;
+          font-size: 18px !important;
+          line-height: 1.4 !important;
+        }
+
+        .button {
+          text-align: left;
+        }
+
+        .button * {
+          background-color: #9278A1 !important;
+          border-radius: 4px !important;
+          color: #9278A1 !important;
+          font-size: 14px !important;
+        }
+
+        .footer div {
+          color: #9278A1 !important;
+          font-size: 12px !important;
+          text-align: center !important;
+        }
+      </mj-style>
+    </mj-head>
+    <mj-body background-color="#d5e2eb">
+      <mj-wrapper full-width="full-width" padding="40px" background-url="wave-top.png" background-size="100% 100%" />
+      <mj-wrapper full-width="full-width" background-color="#9278A1">
+        <mj-section padding="0">
+          <mj-column padding="0">
+            <mj-text css-class="header">
+              New post from Hunter!
+            </mj-text>
+          </mj-column>
+        </mj-section>
+      </mj-wrapper>
+      <mj-wrapper full-width="full-width" padding="40px" background-url="wave-bottom.png" background-size="100% 100%" />
+      <mj-wrapper full-width="full-width" background-color="#9278A1">
+        <mj-section>
+          <mj-column>
+            <mj-text css-class="title">
+            </mj-text>
+            <mj-text css-class="content">
+            </mj-text>
+            <mj-text css-class="content">
+            </mj-text>
+            <mj-button css-class="button" href="https://HThacker.dev/blog">
+              Read more
+            </mj-button>
+          </mj-column>
+        </mj-section>
+      </mj-wrapper>
+      <mj-wrapper full-width="full-width" padding="40px" background-url="wave-final.png" background-size="100% 100%" />
+      <mj-section>
+        <mj-column>
+          <mj-text css-class="footer">
+            If you want to unsubscribe, just reply to let me know and I'll take you off the list!
+          </mj-text>
+        </mj-column>
+      </mj-section>
+    </mj-body>
+  </mjml>
+`, options)
+
+console.log(htmlOutput)
